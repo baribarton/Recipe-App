@@ -3,7 +3,7 @@
 
 # Custom for Visual Studio
 *.cs     diff=csharp
-syntax=java
+vim: syntax=java
 
 # Standard to msysgit
 *.doc	 diff=astextplain
