@@ -11,11 +11,16 @@ import java.util.Arrays;
  *
  */
 public class ArrayManager {
+	private ArrayList<String> amounts = new ArrayList<String>();
+	private ArrayList<String> ingredients = new ArrayList<String>();
 
 	/**
 	 * Empty, no arg Constructor
 	 */
-	public ArrayManager() {
+	public ArrayManager(ArrayList<String> ingredients) {
+		for (int i = 0; i < ingredients.size(); i++) {
+			this.ingredients.add(ingredients.get(i));
+		}
 	}
 
 	/**
@@ -27,7 +32,7 @@ public class ArrayManager {
 	 * @param ingredients
 	 *            the array to put the ingredient list into
 	 */
-	public void manageArrays(ArrayList<String> amounts, ArrayList<String> ingredients) {
+	public void manageArrays() {
 
 		// Removes elements with no valuable content
 		ingredients.removeAll(Arrays.asList(" ", null));
@@ -52,11 +57,6 @@ public class ArrayManager {
 				}
 			}
 		}
-
-		// last 3 lines of the file are garbage
-		for (int i = 1; i <= 3; i++) {
-			ingredients.remove(ingredients.size() - 1);
-		}
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class ArrayManager {
 	 * @param ingredients
 	 *            the array to put the ingredient list into
 	 */
-	public void outputArrays(ArrayList<String> amounts, ArrayList<String> ingredients) {
+	public void outputRecipes() {
 
 		// overwrites the FinalRecipe.txt file
 		PrintWriter finalWriter = null;
@@ -82,7 +82,7 @@ public class ArrayManager {
 		// prints to screen and to file the contents of each array list
 		for (int i = 0; i < ingredients.size(); i++) {
 
-			//don't print the amount if it is 0
+			// don't print the amount if it is 0
 			if (!amounts.get(i).equals("0")) {
 				if (i < amounts.size()) {
 					System.out.print(amounts.get(i) + " ");
@@ -93,7 +93,8 @@ public class ArrayManager {
 			System.out.println(ingredients.get(i));
 			finalWriter.println(ingredients.get(i));
 		}
-		
+
+		//System.out.println(ingredients.size());
 		System.out.println("\n\n");
 		finalWriter.println("\n\n");
 		finalWriter.close();

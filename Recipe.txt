@@ -1,442 +1,49 @@
-EVERY "<span>": 
-Become a Member now!
- 
-Get FREE Members-only access to:
-
-
-Up to $250 per year in coupon savings
-
-
-10,000 free samples every month
-
-
-Newsletters: Be the first to know about coupons, free samples, contest alerts, our hottest recipe ideas and more!
-
-
-MENU+-
-Main Ingredient
-
-
-
-Chicken
-
-Turkey
-
-Vegetables
-
-See All
-
-
-
-
-Dish
-
-
-
-Cakes
-
-Casserole & Pot Pies
-
-Cookies
-
-See All
-
-
-
-
-Preparation
-
-
-
-Baking
-
-Grilling
-
-Slow Cooker
-
-See All
-
-
-
-
-Meal Types
-
-
-
-Breakfast & Brunch
-
-Desserts
-
-Family Dinners
-
-See All
-
-
-
-
-Global
-
-
-
-Asian
-
-Italian
-
-Mexican
-
-See All
-
-
-
-
-Holidays & Entertaining
-
-
-
-Thanksgiving
-
-Christmas
-
-Easy Entertaining
-
-See All
-
-
-
-
-Health & Diet
-
-
-
-Gluten Free
-
-Low Calorie
-
-Vegetarian
-
-See All
-
-
-
-
-Products
-
-
-
-Bisquick
-
-Brownie Mixes
-
-Chex Party Mix
-
-See All
-
-
-
-
-Best Of...
-
-
-Vintage Betty
-
-+-
-Slow Cooker
-
-
-Family Dinners
-
-
-Breakfast & Brunch
-
-
-Lunch
-
-+-
-Dessert of the Month
-
-
-Cupcakes
-
-
-
-Birthday Cupcakes
-
-Chocolate Cupcakes
-
-Kids Cupcakes
-
-See All
-
-
-
-
-Cookies
-
-
-
-Christmas Cookies
-
-Chocolate Chip Cookies
-
-Peanut Butter Cookies
-
-See All
-
-
-
-
-Brownies
-
-
-
-Chocolate Brownies
-
-Brownies with Nuts
-
-Frosted Brownies
-
-See All
-
-
-
-
-Pie
-
-
-
-Pumpkin Pie
-
-Pecan Pie
-
-Apple Pie
-
-See All
-
-
-
-
-Cakes
-
-
-
-Birthday Cakes
-
-Kids Cakes
-
-Bundt Cakes
-
-See All
-
-
-
-
-Bars
-
-
-
-No-Bake Bars
-
-Apple Bars
-
-Pumpkin Bars
-
-See All
-
-
-
-+-
-Salty Snacks
-
-
-Gluten-Free Snacks
-
-
-Sweet Snacks
-
-
-Better-For-You Snacks
-
-
-Bite-Size Snacks
-
-
-Snack Mixes
-
-+-
-Thanksgiving
-
-
-
-Turkey
-
-Thanksgiving Side Dishes
-
-Stuffing & Dressing
-
-See All
-
-
-
-
-Christmas
-
-
-
-24 Days of Cookies
-
-Betty's Guide to Christmas
-
-Timetable for Roasting Meats
-
-See All
-
-
-
-
-Easy Entertaining
-
-
-
-Appetizers
-
-Drinks
-
-Picnics
-
-
-
-
-Valentine's Day
-
-
-Birthdays
-
-
-
-Adult Birthday Cakes
-
-Kids Birthday Cupcakes
-
-Kids Birthday Cakes
-
-See All
-
-
-
-
-Easter
-
-
-
-Ham
-
-Betty's Guide to Brunch
-
-Deviled Eggs
-
-See All
-
-
-
-
-July 4th
-
-
-
-Betty's Guide to Fourth of July
-
-
-
-
-Halloween
-
-
-
-Betty's Guide to Halloween
-
-
-
-+-
-Ask Betty
-
-
-Holidays & Entertaining
-
-
-Shortcuts & Tips
-
-
-Baking & Desserts
-
-
-Ingredients & Preparation
-
-
-Equipment
-
-
-Meal Planning
-
-
-Kids
-
-
-Healthy Eating
-
-
-
-
-
-
-
-
-
- 
-&nbsp8 RatingsPrep Time10minTotal Time10minServings4
-
-
-
-
-
-
-
- 
-
-2
-
-
-
-
-cups Yoplait® Original 99% Fat Free strawberry yogurt
-
-
-
-1
-
-
-
-
-cup sliced fresh or frozen peaches or nectarines
-
-
-
-1
-
-
-
-
-cup sliced fresh strawberries
-
-
-
-1
-
-
-
-
-cup crushed ice
-
-
-1In blender or food processor, place all ingredients. Cover; blend on high speed 30 to 60 seconds or until smooth.2Pour into 4 glasses. Serve immediately.
-Nutrition Information
-Yoplait is a registered trademark of YOPLAIT MARQUES (France) used under license. |||||  /  /  /  / close
+<li class="relatedContentItem recipe" data-contentid="f7501540-a89c-4775-96e4-69edc45732c4" data-contenttype="Recipe" data-isfavorite="False" data-title="Sweet Potato Pie Smoothies">
+<a href="http://www.bettycrocker.com/recipes/sweet-potato-pie-smoothies/f7501540-a89c-4775-96e4-69edc45732c4">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/b1cb4fc6-0e26-49e6-b8b3-9a21d3b19e99.jpg" alt="Sweet Potato Pie Smoothies">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/sweet-potato-pie-smoothies/f7501540-a89c-4775-96e4-69edc45732c4">
+<div class="relatedContentTitle">Sweet Potato Pie Smoothies</div>
+</a>
+</li><li class="relatedContentItem recipe" data-contentid="d1bb1d19-894d-43a9-a8cd-d1f7fd506552" data-contenttype="Recipe" data-isfavorite="False" data-title="Orange Smoothies">
+<a href="http://www.bettycrocker.com/recipes/orange-smoothies/d1bb1d19-894d-43a9-a8cd-d1f7fd506552">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/45907eaa-7bb8-4c97-abed-9f8d8cab73e9.jpg" alt="Orange Smoothies">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/orange-smoothies/d1bb1d19-894d-43a9-a8cd-d1f7fd506552">
+<div class="relatedContentTitle">Orange Smoothies</div>
+</a>
+</li><li class="relatedContentItem recipe" data-contentid="f21705be-ccca-4866-8453-87936fc71342" data-contenttype="Recipe" data-isfavorite="False" data-title="Key Lime-Banana Smoothie">
+<a href="http://www.bettycrocker.com/recipes/key-lime-banana-smoothie/f21705be-ccca-4866-8453-87936fc71342">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/5dcf3c0f-08af-4135-9a8d-8d3abc2145e6.jpg" alt="Key Lime-Banana Smoothie">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/key-lime-banana-smoothie/f21705be-ccca-4866-8453-87936fc71342">
+<div class="relatedContentTitle">Key Lime-Banana Smoothie</div>
+</a>
+</li><li class="relatedContentItem recipe" data-contentid="2a283303-709b-4eb7-85cd-f627959970a5" data-contenttype="Recipe" data-isfavorite="False" data-title="Blueberry Smoothies">
+<a href="http://www.bettycrocker.com/recipes/blueberry-smoothies/2a283303-709b-4eb7-85cd-f627959970a5">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/79ce8c11-9d39-43cd-b780-82490ea6e4d9.jpg" alt="Blueberry Smoothies">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/blueberry-smoothies/2a283303-709b-4eb7-85cd-f627959970a5">
+<div class="relatedContentTitle">Blueberry Smoothies</div>
+</a>
+</li><li class="relatedContentItem recipe" data-contentid="ab27958f-7be1-4c7a-b685-0795c8a84a67" data-contenttype="Recipe" data-isfavorite="False" data-title="Pumpkin Pie Yogurt Smoothies">
+<a href="http://www.bettycrocker.com/recipes/pumpkin-pie-yogurt-smoothies/ab27958f-7be1-4c7a-b685-0795c8a84a67">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/1fe0ba43-0c12-4657-91c7-d744febfc734.jpg" alt="Pumpkin Pie Yogurt Smoothies">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/pumpkin-pie-yogurt-smoothies/ab27958f-7be1-4c7a-b685-0795c8a84a67">
+<div class="relatedContentTitle">Pumpkin Pie Yogurt Smoothies</div>
+</a>
+</li><li class="relatedContentItem recipe" data-contentid="100519fe-f33b-41e3-9c47-a9bb93ada0c8" data-contenttype="Recipe" data-isfavorite="False" data-title="Strawberry-Orange Smoothies">
+<a href="http://www.bettycrocker.com/recipes/strawberry-orange-smoothies/100519fe-f33b-41e3-9c47-a9bb93ada0c8">
+<img class="relatedContentThumbnail" src="http://images-gmi-pmc.edge-generalmills.com/7b6b3c8b-4bb4-41cb-9672-7c3b27df71b5.jpg" alt="Strawberry-Orange Smoothies">
+</a>
+<!--<a href="#" class="favoriteToggle"></a> -->
+<a href="http://www.bettycrocker.com/recipes/strawberry-orange-smoothies/100519fe-f33b-41e3-9c47-a9bb93ada0c8">
+<div class="relatedContentTitle">Strawberry-Orange Smoothies</div>
+</a>
+</li>

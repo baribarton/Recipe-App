@@ -18,18 +18,25 @@ import com.jaunt.UserAgent;
  */
 public class FileManager {
 
-	String title;
+	String title, url, heading;
+
+	// determines whether or not to print inner text or HTML
+	boolean innerText;
+
 	/**
 	 * constructor
 	 */
-	public FileManager() {
-		title = "";
+	public FileManager(String url, String heading, boolean innerText) {
+		this.title = "";
+		this.url = url;
+		this.heading = heading;
+		this.innerText = innerText;
 	}
 
 	/**
 	 * writes text from a webpage to a file. Calls redWebpage()
 	 */
-	public void write(String url, String heading, boolean text) {
+	public void write() {
 		PrintWriter writer = null;
 		try {
 			writer = new PrintWriter("Recipe.txt", "UTF-8");
@@ -41,13 +48,13 @@ public class FileManager {
 			e.printStackTrace();
 		}
 
-		String noSpaces = readWebpage(writer, url, heading, text);
+		String noSpaces = readWebpage(writer);
 
 		// write to a file to be read from later
-		writer.println("EVERY \"<span>\":" + noSpaces);
+		writer.println(noSpaces);
 		writer.close();
 
-		if(text)
+		if (innerText)
 			removeBlankLines();
 	}
 
@@ -82,7 +89,7 @@ public class FileManager {
 					i--;
 				}
 			}
-//			lines.trimToSize();
+			// lines.trimToSize();
 
 			// write to file
 			for (int i = 0; i < lines.size(); i++) {
@@ -106,15 +113,10 @@ public class FileManager {
 	 * Called by write(). Reads a webpage
 	 * 
 	 * @return a String representation of normal text from HTML code
-	 */
-	/**
 	 * @param writer
-	 * @param url
-	 * @param heading
-	 * @param inner
-	 * @return
+	 *            the PrintWriter object to write to a file
 	 */
-	private String readWebpage(PrintWriter writer, String url, String heading, boolean text) {
+	private String readWebpage(PrintWriter writer) {
 
 		// create new userAgent (headless browser)
 		UserAgent userAgent = new UserAgent();
@@ -130,7 +132,7 @@ public class FileManager {
 
 			// trims extra spaces
 			String noSpaces = "";
-			if (text) {
+			if (innerText) {
 				noSpaces = step1.innerText(null, true, true);
 			} else {
 				noSpaces = step1.innerHTML();
@@ -165,11 +167,6 @@ public class FileManager {
 		// current line of file
 		String currentLine = "";
 
-		// this is used to indicate when the ingredients
-		// need to start being read in on the document
-		// since there is so much other text
-		boolean start = false;
-
 		// used to count lines
 		// int lineNumber = 1;
 
@@ -180,53 +177,81 @@ public class FileManager {
 				// System.out.println(lineNumber + " " + currentLine);
 				// System.out.println(currentLine);
 
-				// starts reading ingredients after the first instance of
-				// "&nbsp" is detected
-				if (!start) {
-					if ((currentLine.length() > 4) && (currentLine.substring(0, 5).equals("&nbsp"))) {
-
-						// removes the "indication line" from being in the
-						// file
-						currentLine = in.readLine();
-						start = true;
-					}
-				}
-
 				// do not read blank lines
 				if (currentLine.trim().equals("")) {
 					currentLine = in.readLine();
 				}
 
-				// read ingredient
-				if (start) {
+				// this block handles ingredients without an amount
+				if (ingredients.size() > 1) {
 
-					// this next block is just removing lines that are garbage
-					if (currentLine.trim().equals("Recipe by")) {
-						for (int i = 1; i <= 3; i++) {
-							currentLine = in.readLine();
-						}
-					}
+					// prevents reading some numbers (redundant but safe)
+					if (currentLine.length() > 3) {
 
-					// this block handles ingredients without an amount
-					if (ingredients.size() > 1) {
-						if ((ingredients.get(ingredients.size() - 2).length() > 6)
-								&& (ingredients.get(ingredients.size() - 1).length() > 6)) {
+						// if the current line and the previous line are not
+						// numbers, then the amount is 0
+						if (notANumber(currentLine) && notANumber(ingredients.get(ingredients.size() - 1))) {
 							ingredients.add("0");
 						}
 					}
-					ingredients.add(currentLine);
 				}
-				// lineNumber++;
+				ingredients.add(currentLine);
 			}
 
-			//System.out.println("\n\n-----------------END----------------OF-------------------FILE---------------\n\n");
+			// System.out.println("\n\n-----------------END----------------OF-------------------FILE---------------\n\n");
 			in.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-	
+
+	/**
+	 * Accessor for the title of the recipe
+	 * 
+	 * @return the title of the recipe
+	 */
 	public String getTitle() {
 		return title;
+	}
+
+	/**
+	 * Returns whether the input string is a number or not
+	 * 
+	 * @param s
+	 *            the string in question
+	 * @return boolean
+	 */
+	private boolean notANumber(String s) {
+		if (!(String.valueOf((s.charAt(0))).matches("\\d+$"))
+				&& !(String.valueOf((s.charAt(s.length() - 1))).matches("\\d+$"))) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Tester for this class
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		String urlPrime = "http://www.bettycrocker.com/recipes/salted-caramel-apple-cookies/a8324330-b1a6-4a7e-a446-ba52727a7677";
+
+		ArrayList<String> ingredients = new ArrayList<String>();
+
+		FileManager fm = new FileManager(urlPrime, "<dl class=\"recipePartIngredient\"", true);
+
+		fm.write();
+
+		// read file
+		fm.readFile(ingredients);
+
+		ArrayManager am = new ArrayManager(ingredients);
+
+		System.out.println(fm.getTitle() + "\n" + urlPrime + "\n\n");
+
+		// organizes arrays properly
+		am.manageArrays();
+		am.outputRecipes();
 	}
 }

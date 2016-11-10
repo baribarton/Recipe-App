@@ -4,6 +4,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * This class discovers new links to other pages with recipes on them and stores
+ * the links so that they can be visited later
+ * 
+ * @author Jabari Barton
+ * @author Nicole Gallacher
+ *
+ */
 public class LinkFinder {
 
 	static ArrayList<String> links = new ArrayList<String>();
@@ -13,14 +21,18 @@ public class LinkFinder {
 	}
 
 	/**
-	 * findsearches for links on webpage
+	 * searches for links on webpage
 	 * 
 	 * @param url
 	 *            desired webpage to search for links on
 	 */
 	private void findLinks(String url) {
-		FileManager fileManager = new FileManager();
-		fileManager.write(url, "<li class=\"relatedContentItem recipe\"", false);
+
+		//create fileManager object
+		FileManager fileManager = new FileManager(url, "<li class=\"relatedContentItem recipe\"", false);
+		
+		//write to file
+		fileManager.write();
 
 		BufferedReader in = null;
 		try {
@@ -28,10 +40,13 @@ public class LinkFinder {
 
 			String currentLine = "";
 
+			//separates HTML from the urls
 			while ((currentLine = in.readLine()) != null) {
 				if (currentLine.contains("http://www.bettycrocker.com/recipes/")) {
-					// System.out.println("!!");
-					links.add(currentLine);
+					currentLine = exposeLink(currentLine);
+					if (notInList(currentLine)) {
+						links.add(currentLine);
+					}
 				}
 			}
 
@@ -57,13 +72,24 @@ public class LinkFinder {
 				}
 			}
 		}
+
+	}
+
+	private boolean notInList(String currentLine) {
+
+		for (int i = 0; i < links.size(); i++) {
+			if (links.get(i).equals(currentLine)) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
-	 * removes extra text on the beginning and end of the url in order to
-	 * separate the URL
+	 * removes extra text on the beginning and end of the url on the entire list
+	 * in order to separate the URL
 	 */
-	private void exposeLink() {
+	private void exposeLinks() {
 		int size = links.size();
 		for (int i = 0; i < size; i++) {
 			links.set(i, (links.get(i).replaceAll("<a href=\"", "")));
@@ -71,8 +97,17 @@ public class LinkFinder {
 		}
 	}
 
-	private void changeLink(String url) {
-		findLinks(url);
+	/**
+	 * removes extra text on the beginning and end of a single url in order to
+	 * separate the URL
+	 * 
+	 * @param link
+	 */
+	private String exposeLink(String url) {
+		url = url.trim();
+		url = url.substring(9, url.length() - 2);
+
+		return url;
 	}
 
 	/**
@@ -80,19 +115,17 @@ public class LinkFinder {
 	 * one and adds them to the list
 	 * 
 	 * @param urlPrime
-	 * initial url to start with
+	 *            initial url to start with
 	 */
 	public void generateLinks(String urlPrime, int limit) {
 		findLinks(urlPrime);
 
 		for (int i = 0; i < limit; i++) {
-			removeDuplicates();
-			exposeLink();
-			changeLink(links.get(i));
+			exposeLinks();
+			findLinks(links.get(i));
 		}
 
-		removeDuplicates();
-		exposeLink();
+		exposeLinks();
 		displayLinks();
 	}
 
