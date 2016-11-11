@@ -32,7 +32,10 @@ public class LinkFinder {
 				if (currentLine.contains("http://www.bettycrocker.com/recipes/")) {
 					// System.out.println("!!");
 					
+					//exposes the link of the current line 
 					currentLine = exposeLink(currentLine); 
+					
+					//if the current line is not in our links list, add it 
 					if(notInList(currentLine))
 					{
 						//currentLine = exposeLink(currentLine); 
@@ -55,6 +58,7 @@ public class LinkFinder {
 	 * removes duplicate elements in list
 	 */
 	public void removeDuplicates() {
+		
 		for (int i = 0; i < links.size(); i++) {
 			for (int j = 0; j < links.size(); j++) {
 				if ((i != j) && (links.get(i).equals(links.get(j)))) {
@@ -66,7 +70,12 @@ public class LinkFinder {
 		
 		
 	}
-
+	/**
+	 * Returns a boolean that is true if the String is not currently in the links list
+	 * Returns false if links list already contains input String 
+	 * @param currentLine
+	 * @return
+	 */
 	private boolean notInList(String currentLine)
 	{
 		
